@@ -6,14 +6,70 @@
     <title>Forms</title>
 </head>
 <body>
-    <h1 id="miTexto">Un formulario</h1>
+    <h1 id="abc">Un formulario</h1>
     <form action="URL">
         <fieldset>
             <legend>Entrada de texto</legend>
             <p>
-                <label>Text box</label>
-                <input type="text" id="miTexto">
+                <label>Usuario</label>
+                <input type="text" id="usuario" autofocus placeholder="Usuario">
             </p>
+            <p>
+                <label>Constraseña</label>
+                <input type="password" id="pass" placeholder="Tu contraseña">
+            </p>
+            <p>
+                <label>Descripción</label>
+                <textarea id="desc" rows="4" cols="80">
+                    Escriba su historia acá
+                </textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Elementos de selección</legend>
+            <p>
+                <label>Productos disponibles (Lista select)</label>
+                <select id="miLista">
+                    <option value="p07">Atún Vancamps</option>
+                    <option value="p12">Toallas higiénicas Babyñoño</option>
+                    <option value="p02">Papel higiénico Scott</option>
+                    <option value="p44">Maruchan</option>
+                </select>
+            </p>
+            <p>
+                <label>Check boxes</label>
+                <input type="checkbox" id="chkProds" value="hvsCriollos">
+                <label for="chkProds">Huevos criollos</label>
+                <input type="checkbox" id="chkJam" value="jam">
+                <label for="chkJam">Jamón</label>
+            </p>
+            <p>
+                <label>Radio buttons</label>
+                <input type="radio" name="radTemperatura" id="tempFrio" value="frio">
+                <label for="tempFrio">Frío</label>
+                <input type="radio" name="radTemperatura" id="tempTibio" value="tibi" checked>
+                <label for="tempFrio">Tibio</label>
+                <input type="radio" name="radTemperatura" id="tempCaliente" value="cali">
+                <label for="tempFrio">Caliente</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Buttons</legend>
+            <p>
+                <input type="submit" value="REGISTRAR">
+                <button type="button">Botón estándar</button>
+                <input type="reset">
+                <input type="button" value="Input - button">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Varios</legend>
+            <input type="color" id="color">
+            <br>
+            <input type="date" id="date">
+            <br>
+            <input type="datetime" id="datetime">
+            <br> Edad<input type="number" id="numero" max="10" min="1">
         </fieldset>
     </form>
 </body>
