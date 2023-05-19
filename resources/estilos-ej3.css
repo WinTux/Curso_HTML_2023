@@ -1,4 +1,87 @@
 body {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;/*column, column-reverse, row, row-reverse*/
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 250px;
+    height: 110px;
+    position: relative;
+    display: block;
+    background: #EBEBEB;
+    border-radius: 100px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4);
+    cursor: pointer;/* pointer, move, none, help, progress, zoom-in, zoom-out, etc. */
+
+}
+
+label:after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(180deg,#fced27, #D8880B);
+    border-radius: 90px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+/* ocultamos el checkbox */
+input {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+/* cambio de colores si el checkbox es seleccionado */
+input:checked + label {
+    background: #100f64;
+}
+/* animación */
+input:checked + label:after {
+    left: 240px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#736ae9, #0a0347);
+    transition: 0.3s;/*0.3*/
+}
+/* efecto de estiramiento */
+label:active:after {
+    width: 130px;
+}
+
+.elemento_cambiante{
+    width: 100vw;
+    height: 100vh;
+    background: #EBEBEB;
+    color: #100f64;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+/*cambiando la apariencia cuando input esté checked*/
+input:checked + label + .elemento_cambiante {
+    background: #343449;
+    color: #dde93d;
+}
+
+label svg {
+    position: absolute;
+    width: 60px;
+    top: 60px;
+    z-index: 100;
+}
+
+label svg.luna {
+    left: 340px;
+    fill: #7E7E7E;
+    transition: 0.3s;
+}
+
+input:checked + label svg.luna {
+    fill: #FFF;
 }
