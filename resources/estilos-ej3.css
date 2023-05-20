@@ -45,7 +45,7 @@ input:checked + label {
 /* animación */
 input:checked + label:after {
     left: 240px;
-    transform: translateX(-100%);
+    transform: translateX(-100%);/*rem px ch*/
     background: linear-gradient(180deg,#736ae9, #0a0347);
     transition: 0.3s;/*0.3*/
 }
@@ -72,12 +72,20 @@ input:checked + label + .elemento_cambiante {
 label svg {
     position: absolute;
     width: 60px;
-    top: 60px;
+    height: 60px;
+    top: 25px;
+    left: 130px;
     z-index: 100;
 }
 
 label svg.luna {
-    left: 340px;
+    left: 170px;
+    fill: #7E7E7E;
+    transition: 0.3s;
+}
+
+label svg.sol {
+    left: 25px;
     fill: #7E7E7E;
     transition: 0.3s;
 }
@@ -85,3 +93,51 @@ label svg.luna {
 input:checked + label svg.luna {
     fill: #FFF;
 }
+
+input:checked + label svg.sol {
+    fill: #FFF;
+}
+
+/* ejemplos sueltos */
+p:after {
+    content: "Hola, soy Pepe";
+    color: red;
+    font-size: 20px;
+}
+
+div + p {
+    background-color: #100f64;
+    color: #dde93d;
+}
+
+/*Unidades absolutas
+*********************
+
+cm mm in 
+(1 in = 2.54 cm = 96px)
+px pt [point]
+(1 pt = 1/72 in)
+pc [picas]
+(1 pc = 12 pt)
+
+Uniddes relativas
+*****************
+
+em: relativo al font-size del elemento
+ex: relativo al tamaño X del Font del elemento
+ch: relativo al ancho del cero -> 0
+rem: relativo al font-size del elemento root
+vw: relativo al 1% del ancho del viewport
+vh: relativo al 1% del alto del viewport
+vmin: relativo al 1% del viewport mínimo
+vmax: relativo al 1% del viewport máximo
+%: relativo al elemento padre
+
+viewport ES el tamaño de la ventana
+*/
+
+/* z-index
+
+solo funciona con valores, de la propiedad position: 
+relative, absolute, fixed, sticky y con items flex
+*/
