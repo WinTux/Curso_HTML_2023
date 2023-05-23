@@ -1,0 +1,91 @@
+@import "estilo_extra";
+/* Definición de variables */
+
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+$una-variable: #77FF22;
+$miFont: Helvetica, sans-serif;
+$miColor: red;
+$miFontSize: 22px;
+$miWidth: 680px;
+
+@mixin nombre-cualquiera {
+    color: brown;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blueviolet;
+}
+
+@mixin otro-mixin {
+
+}
+
+@mixin bordeador($coloreishon, $ancho) {
+    border: $ancho solid $coloreishon;
+    color: $coloreishon;
+}
+
+@mixin estilizado-espacial {
+    @include nombre-cualquiera;
+    @include otro-mixin;
+}
+
+
+
+/* Uso de variables  */
+body {
+    background-color: $bgcolor;
+    color: $miColor;
+    font-size: $miFontSize;
+    font-family: $miFont;
+    font: {
+        size: $miFontSize;
+        family: $miFont;
+        weight: bold;
+    }
+
+    text: {
+        align: center;
+        transform: uppercase;
+        overflow: hidden;
+    }
+}
+
+#contenedor {
+    width: $miWidth;
+}
+
+h1 {
+    $miColor: green !global;
+    $abc: 30px;
+    color: $miColor;
+}
+p{
+    @include nombre-cualquiera;
+    padding: 10px;
+}
+
+/*Uso de anidamiento*/
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+        @include bordeador(orange, 15px);
+    }
+    a {
+        @include nombre-cualquiera;
+        display: block;
+        padding: 3px 30px;
+        text-decoration: none;
+    }
+}
+
+div {
+    @include bordeador(blue, 5px);
+}

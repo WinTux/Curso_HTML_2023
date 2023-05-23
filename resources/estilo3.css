@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* line 1, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo_extra.scss */
+html, body, ul, ol {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Definición de variables */
+/* Uso de variables  */
+/* line 38, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+body {
+  background-color: lightblue;
+  color: red;
+  font-size: 22px;
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-overflow: hidden;
+}
+
+/* line 56, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+#contenedor {
+  width: 680px;
+}
+
+/* line 60, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+h1 {
+  color: green;
+}
+
+/* line 65, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+p {
+  color: brown;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blueviolet;
+  padding: 10px;
+}
+
+/*Uso de anidamiento*/
+/* line 72, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 77, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+nav li {
+  display: inline-block;
+  border: 15px solid orange;
+  color: orange;
+}
+
+/* line 81, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+nav a {
+  color: brown;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blueviolet;
+  display: block;
+  padding: 3px 30px;
+  text-decoration: none;
+}
+
+/* line 89, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+div {
+  border: 5px solid blue;
+  color: blue;
+}
+
+/*# sourceMappingURL=estilo3.css.map */
