@@ -6,8 +6,9 @@ html, body, ul, ol {
 }
 
 /* Definición de variables */
+/* mixin con argumentos (valores por defecto) */
 /* Uso de variables  */
-/* line 38, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 56, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 body {
   background-color: lightblue;
   color: red;
@@ -21,17 +22,17 @@ body {
   text-overflow: hidden;
 }
 
-/* line 56, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 74, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 #contenedor {
   width: 680px;
 }
 
-/* line 60, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 78, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 h1 {
   color: green;
 }
 
-/* line 65, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 83, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 p {
   color: brown;
   font-size: 25px;
@@ -41,21 +42,21 @@ p {
 }
 
 /*Uso de anidamiento*/
-/* line 72, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 90, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 77, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 95, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 nav li {
   display: inline-block;
   border: 15px solid orange;
   color: orange;
 }
 
-/* line 81, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 99, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 nav a {
   color: brown;
   font-size: 25px;
@@ -66,10 +67,63 @@ nav a {
   text-decoration: none;
 }
 
-/* line 89, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+/* line 107, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
 div {
   border: 5px solid blue;
   color: blue;
 }
+
+/* line 113, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+p a {
+  background-color: white;
+  border: 3px solid orange;
+  color: red;
+}
+
+/* line 118, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+.caja {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: yellow;
+  border: 5px solid yellow;
+  color: black;
+}
+
+/* line 125, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+.boton-simple, .boton-alerta, .boton-submit {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* line 133, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+.boton-alerta {
+  background-color: red;
+}
+
+/* line 138, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+.boton-submit {
+  background-color: greenyellow;
+  color: orangered;
+}
+
+/* Funciones en SASS */
+/* cadenas (string) 
+texto
+
+"sdfds d AAfdfr 56 545 3 3345 $%$ 5resf"
+
+"k"
+
+" "
+
+""
+
+NULL
+
+*/
 
 /*# sourceMappingURL=estilo3.css.map */

@@ -11,6 +11,8 @@ $miColor: red;
 $miFontSize: 22px;
 $miWidth: 680px;
 
+$txt: "ABCxyz";
+
 @mixin nombre-cualquiera {
     color: brown;
     font-size: 25px;
@@ -27,12 +29,28 @@ $miWidth: 680px;
     color: $coloreishon;
 }
 
+/* mixin con argumentos (valores por defecto) */
+@mixin bordeador2($coloreishon: blue, $ancho: 2px) {
+    border: $ancho solid $coloreishon;
+    color: $coloreishon;
+}
+
+@mixin super_mixin($bgcolor: white, $color: black, $border-color: red, $ancho: 10px){
+    background-color: $bgcolor;
+    border: $ancho solid $border-color;
+    color: $color;
+}
+
 @mixin estilizado-espacial {
     @include nombre-cualquiera;
     @include otro-mixin;
 }
 
-
+@mixin transformacion($propiedad){
+    -webkit-transform: $propiedad;
+    -ms-transform: $propiedad;
+    transform: $propiedad;
+}
 
 /* Uso de variables  */
 body {
@@ -87,5 +105,55 @@ nav {
 }
 
 div {
-    @include bordeador(blue, 5px);
+    @include bordeador($ancho: 5px, $coloreishon: blue);
+    
 }
+
+p {
+    a {
+        @include super-mixin( $ancho: 3px, $color: red, $border-color:orange);
+    }
+}
+
+.caja {
+    @include transformacion(rotate(45deg));
+    background-color: yellow;
+    border: 5px solid yellow;
+    color: black;
+}
+
+.boton-simple {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton-alerta {
+    @extend .boton-simple;
+    background-color: red;
+}
+
+.boton-submit {
+    @extend .boton-simple;
+    background-color: greenyellow;
+    color: orangered;
+}
+
+/* Funciones en SASS */
+
+/* cadenas (string) 
+texto
+
+"sdfds d AAfdfr 56 545 3 3345 $%$ 5resf"
+
+"k"
+
+" "
+
+""
+
+NULL
+
+*/
