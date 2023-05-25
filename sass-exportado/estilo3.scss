@@ -157,3 +157,64 @@ texto
 NULL
 
 */
+$txt: "Pepe";
+
+div {
+    $cad: quote(Arial);/* "Arial" */
+    
+    $cad: unquote($string: "Arial");
+    /* Veamos el resultado con una condicional */
+    font-family: $cad, Helvetica, sans-serif;
+
+    /*Para obtener el índice de una subcadena*/
+    $indice: str-index("Hola Pepe", "Pe");/* 6 */
+
+    /*Para insertar una subcadena en una cadena*/
+    $nuevoString: str-insert($insert: ", soy",$string: "Hola Pepe",  $index: 5);
+    $nuevoString: str-insert("Hola Pepe",", soy", 5);
+    /*Para obtener la longitud de cadena*/
+    $cadena: "Música";
+    $longitud: str-length($string: $cadena); /* 6 */
+
+    /*Slice: para extraer una subcadena*/
+    $cad_cortada: str-slice("Hola Pepe", 3, 7);/* "la Pe" */
+
+    /*Para convertir una cadena a mayúsculas/minúsculas */
+    $res: to-upper-case("Hola a Todos"); /* "HOLA A TODOS" */
+    $res: to-lower-case("Hola a Todos"); /* "hola a todos" */
+
+    $red: 44;
+    color: rgb($green: 156, $red: $red,  $blue: 225);
+}
+
+p {
+    /*Valor absoluto de un numero */
+    $n: abs(-20);/* 20 */
+
+    /*Ceil: redondéo al entero superior */
+    $n: ceil(15.000045); /* 16 */
+
+    /*floor: redondéo al entero inferior*/
+    $n: floor($number: 15.99999);/* 15 */
+
+    /* Para comparar dos numeos*/
+    $resultado: comparable(15px, 9px);/* true */
+    $resultado: comparable(100mm, 5cm);/* true */
+    $resultado: comparable(35px, 85px);/* false */
+
+    /*máximo/mínimo*/
+    $val: max(4, 6, 2, 200, -5, 0); /* 200 */
+    $val: min(18, 7, 5, 255, 34, 9); /* 5 */
+    color: rgb($val, 0, 200);
+
+    /* Porcfentaje */
+    /*
+        0, 1, 0.5, 0.25
+    */
+    $val: percentage(1.3); /* 130 */
+    $val: percentage(0.25); /* 25 */
+
+    $val: random(); /* 0.45683 */
+    $val: random(); /* 0.9815 */
+    $val: random(6); /* 1 y 6 (inclusivo) */
+}

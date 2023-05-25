@@ -125,5 +125,49 @@ texto
 NULL
 
 */
+/* line 162, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+div {
+  /* "Arial" */
+  /* Veamos el resultado con una condicional */
+  font-family: Arial, Helvetica, sans-serif;
+  /*Para obtener el índice de una subcadena*/
+  /* 6 */
+  /*Para insertar una subcadena en una cadena*/
+  /*Para obtener la longitud de cadena*/
+  /* 6 */
+  /*Slice: para extraer una subcadena*/
+  /* "la Pe" */
+  /*Para convertir una cadena a mayúsculas/minúsculas */
+  /* "HOLA A TODOS" */
+  /* "hola a todos" */
+  color: #2c9ce1;
+}
+
+/* line 190, ../../OneDrive/Escritorio/Curso HTML/sass-exportado/estilo3.scss */
+p {
+  /*Valor absoluto de un numero */
+  /* 20 */
+  /*Ceil: redondéo al entero superior */
+  /* 16 */
+  /*floor: redondéo al entero inferior*/
+  /* 15 */
+  /* Para comparar dos numeos*/
+  /* true */
+  /* true */
+  /* false */
+  /*máximo/mínimo*/
+  /* 200 */
+  /* 5 */
+  color: #0500c8;
+  /* Porcfentaje */
+  /*
+        0, 1, 0.5, 0.25
+    */
+  /* 130 */
+  /* 25 */
+  /* 0.45683 */
+  /* 0.9815 */
+  /* 1 y 6 (inclusivo) */
+}
 
 /*# sourceMappingURL=estilo3.css.map */
