@@ -253,4 +253,80 @@ p {
     $otra-lista: 20, (15 0), 5;
     @debug $otra-lista;
 
+    $lista-vacia: ();
+    @debug $lista-vacia;
+
+    $lista-con-vacios: 10px () 40px 0;
+    @debug $lista-con-vacios;
+
+    $lista-con-vacios: 10px $lista-vacia 40px 0;
+    @debug $lista-con-vacios;
+
+    margin: $lista-con-vacios;
+
+    //Funciones para las listas
+    $cant: length($otra-lista);
+    @debug $cant;
+
+    $cant: length(3 5 9 7 12 3);
+    @debug $cant;
+
+    $elemento: nth(3 5 7 12 45, 2); // 3er 4to 6to 9no 1st 2nd 
+    @debug $elemento;
+
+    $elemento: nth($otra-lista, 2);
+    @debug $elemento;
+
+    $x: set-nth($otra-lista, 2, 56em);
+    @debug $x;
+    @debug $otra-lista;
+
+    $x: set-nth(5 10 15 20 7 30 35, 5, 25);
+    @debug $x;
+
+    $x: join($otra-lista, $fuente);
+    @debug $x;
+    @debug length($x);
+
+    $x: join($margen, $fuente);
+    @debug $x;
+    @debug length($x);
+
+    $x: join($margen, $fuente, comma); // comma, space, auto
+    @debug $x;
+    @debug length($x);
+
+    $x: append($otra-lista , 88px);
+    @debug $x;
+    @debug length($x);
+
+    $x: append((9, 8, 7) , 6);
+    @debug $x;
+    @debug length($x);
+
+    $x: zip($margen, $x);
+    @debug $x;
+
+    $elemento: nth($x, 4);
+    @debug $elemento;
+
+    $elemento: nth( nth($x, 4), 1);
+    @debug $elemento;
+
+    //4-D
+    $x: zip($margen, $x);
+
+    $x: zip((a, b, c, d), $x);
+    $x: zip((3em, 5em, 12em, 45em), $x);
+    @debug $x;
+
+    $indice: index($margen, 40px);
+    @debug $indice;
+
+    /*
+    Mapas
+    funciones sobre mapas
+    bucles
+    condicionales
+    */
 }
